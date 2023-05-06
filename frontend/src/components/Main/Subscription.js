@@ -8,14 +8,14 @@ const Subscription = () => {
     setEmail(e.target.value)
   }
 
-  window.FB.api(
-    '/me',
-    'GET',
-    {"fields":"id,name"},
-    function(response) {
-        console.log(response)
-    }
-  );
+  const accessToken = "your_access_token_here";
+  const url = `https://graph.facebook.com/v12.0/me?access_token=${'IGQVJVWHpDTmtrRnZA4bTNXbEtJUFktUG10NjRIYlVUeDRneFZAVb0RacUV3UFlIb1JvVWYzZAXVzWWtwa0wzYXBOOHFFR1FSZAHdjYW5PVDEwczUwNElULTRXeVduazZABbHJMc05kaTJXUGd3cnNBWEZAZANwZDZD'}`;
+  
+  fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+  
 
   return (
     <div className='bg-gray-200 mt-40 pb-10'>
