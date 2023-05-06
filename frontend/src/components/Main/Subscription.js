@@ -8,13 +8,17 @@ const Subscription = () => {
     setEmail(e.target.value)
   }
 
-  const accessToken = "your_access_token_here";
-  const url = `https://graph.facebook.com/v12.0/me?access_token=${'IGQVJVWHpDTmtrRnZA4bTNXbEtJUFktUG10NjRIYlVUeDRneFZAVb0RacUV3UFlIb1JvVWYzZAXVzWWtwa0wzYXBOOHFFR1FSZAHdjYW5PVDEwczUwNElULTRXeVduazZABbHJMc05kaTJXUGd3cnNBWEZAZANwZDZD'}`;
+  const url = "https://graph.facebook.com/v12.0/me";
+  const accessToken = "IGQVJVWHpDTmtrRnZA4bTNXbEtJUFktUG10NjRIYlVUeDRneFZAVb0RacUV3UFlIb1JvVWYzZAXVzWWtwa0wzYXBOOHFFR1FSZAHdjYW5PVDEwczUwNElULTRXeVduazZABbHJMc05kaTJXUGd3cnNBWEZAZANwZDZD";
   
-  fetch(url)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+  fetch(url, {
+    headers: {
+      "Authorization": `Bearer ${accessToken}`
+    }
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
   
 
   return (
