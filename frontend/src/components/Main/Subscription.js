@@ -8,6 +8,15 @@ const Subscription = () => {
     setEmail(e.target.value)
   }
 
+  window.FB.api(
+    '/me',
+    'GET',
+    {"fields":"id,name"},
+    function(response) {
+        console.log(response)
+    }
+  );
+
   return (
     <div className='bg-gray-200 mt-40 pb-10'>
       <div className='flex flex-col items-center'>
