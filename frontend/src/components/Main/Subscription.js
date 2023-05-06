@@ -1,5 +1,5 @@
 import { EnvelopeIcon } from '@heroicons/react/24/outline'
-import {useState} from 'react'
+import { useState } from 'react'
 
 const Subscription = () => {
   const [email, setEmail] = useState('')
@@ -8,18 +8,6 @@ const Subscription = () => {
     setEmail(e.target.value)
   }
 
-  const url = "https://graph.facebook.com/v12.0/me";
-  const accessToken = "IGQVJVWHpDTmtrRnZA4bTNXbEtJUFktUG10NjRIYlVUeDRneFZAVb0RacUV3UFlIb1JvVWYzZAXVzWWtwa0wzYXBOOHFFR1FSZAHdjYW5PVDEwczUwNElULTRXeVduazZABbHJMc05kaTJXUGd3cnNBWEZAZANwZDZD";
-  
-  fetch(url, {
-    headers: {
-      "Authorization": `Bearer ${accessToken}`
-    }
-  })
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
-  
 
   return (
     <div className='bg-gray-200 mt-40 pb-10'>
@@ -32,8 +20,17 @@ const Subscription = () => {
           }
         </p>
         <form className='p-5 flex'>
-          <input type='email' name='email' value={email} onChange={handleChange} placeholder='Enter your email' className='w-60 h-8 border border-black placeholder-black p-2 font-light'/>
-          <button  className='bg-black text-white text-xs p-2 h-8 font-thin border border-black -ml-1'>{'subscribe'.toUpperCase()}</button>
+          <input
+            type='email'
+            name='email'
+            value={email}
+            onChange={handleChange}
+            placeholder='Enter your email'
+            className='w-60 h-8 border border-black placeholder-black p-2 font-light'
+          />
+          <button className='bg-black text-white text-xs p-2 h-8 font-thin border border-black -ml-1'>
+            {'subscribe'.toUpperCase()}
+          </button>
         </form>
       </div>
     </div>
