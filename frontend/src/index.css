@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#main-img {
+  background-image: url('./assets/main/synapse-coffee-shop-lab.jpg');
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}

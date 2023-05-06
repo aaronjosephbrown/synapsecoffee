@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
-const leftLinks = [
+const links = [
   {
     title: 'Cafes',
     address: '#',
@@ -15,20 +15,20 @@ const leftLinks = [
     address: '#',
   },
   {
-    title: 'Orders',
+    title: 'Order',
     address: '#',
   },
 ]
 
 const LeftLinks = () => {
   return (
-    <div>
+    <div className='flex-1'>
       <ul className='flex'>
-        {leftLinks.map((link, i) => {
+        {links.map((link, i) => {
           return (
             <li key={i}>
               <NavLink to={link.address} className='flex items-center pr-3'>
-                <span className='pr-1'>{link.title}</span>
+                <span className='pr-1'>{link.title.toUpperCase()}</span>
                 <ChevronDownIcon className='h-3' />
               </NavLink>
             </li>
