@@ -25,7 +25,7 @@ const InstagramFeed = () => {
   return (
     <div>
       <p className='text-center font-semibold text-2xl p-10 mt-10'>Instagram</p>
-      <div className='instagram-feed grid grid-cols-5 gap-2'>
+      <div className='instagram-feed justify-center grid md:grid-cols-5 gap-2'>
         {feed.map((post) => (
           <div key={post.id} className='instagram-post'>
             {post.media_type === 'IMAGE' ||

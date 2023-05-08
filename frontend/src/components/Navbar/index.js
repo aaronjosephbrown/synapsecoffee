@@ -1,13 +1,44 @@
 import Center from './CenterNavSection'
 import Left from './LeftNavSection'
 import Right from './RightNavSection'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
+import centerLogo from '../../assets/logo/synapse-coffee-nav-logo.jpg'
 
 const NavBar = () => {
   return (
-    <nav className='flex items-center justify-between h-20 mt-4 mx-auto sm:px-6 lg:px-8 font-semibold' >
-      <Left />
-      <Center />
-      <Right />
+    <nav>
+      <div className='hidden md:flex items-center'>
+        <Left />
+        <Center />
+        <Right />
+      </div>
+      <div className='md:hidden'>
+        <Disclosure>
+          {({ open }) => (
+            <>
+              <div className='flex justify-between'>
+                <Disclosure.Button className='py-2'>
+                  {open ? (
+                    <XMarkIcon className='h-8' />
+                  ) : (
+                    <Bars3Icon className='h-8' />
+                  )}
+                </Disclosure.Button>
+                <div>
+                <img
+                  src={centerLogo}
+                  className='h-20'
+                  alt='synapse-coffee-shop-logo'
+                />
+                </div>
+                <div>{/*Placeholder*/}</div>
+              </div>
+              <Disclosure.Panel>Hello! I'll be finishing this soon!</Disclosure.Panel>
+            </>
+          )}
+        </Disclosure>
+      </div>
     </nav>
   )
 }

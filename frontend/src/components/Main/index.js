@@ -1,4 +1,4 @@
-import InstagramFeed from '../InstagramFeed'
+import InstagramFeed from '../IG/InstagramFeed'
 import Features from './Features'
 import Middle from './Middle'
 import Subscription from './Subscription'

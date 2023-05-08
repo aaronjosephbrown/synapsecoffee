@@ -33,7 +33,7 @@ const Features = () => {
       <div className='flex justify-center font-semibold pt-10 pb-5'>
         <p>{'Shop Featured Items'.toUpperCase()}</p>
       </div>
-      <div className='grid gap-4 grid-cols-5'>
+      <div className='grid gap-4 md:grid-cols-5 justify-center'>
       {featuredImages.map((image, i) => {
           return (
             <div key={i}>
