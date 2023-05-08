@@ -8,7 +8,6 @@ const Subscription = () => {
     setEmail(e.target.value)
   }
 
-
   return (
     <div className='bg-gray-200 mt-40 pb-10'>
       <div className='flex flex-col items-center'>

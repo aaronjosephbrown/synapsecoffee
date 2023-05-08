@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom'
 import { ShoppingBagIcon } from '@heroicons/react/24/outline'
 
 const RightNavSection = () => {
-  
   const links = [
     {
       title: 'Log In',
@@ -20,12 +19,12 @@ const RightNavSection = () => {
         {links.map((link, i) => {
           return (
             <li key={i} className='pr-3'>
-              <NavLink to={link.address} >{link.title.toUpperCase()}</NavLink>
+              <NavLink to={link.address}>{link.title.toUpperCase()}</NavLink>
             </li>
           )
         })}
       </ul>
-      <ShoppingBagIcon className='h-5'/>
+      <ShoppingBagIcon className='h-5' />
     </div>
   )
 }

@@ -5,7 +5,7 @@ const CenterNavSection = () => {
   return (
     <div className='flex'>
       <Link to='#'>
-        <img src={centerLogo} className='h-20' alt="synapse-coffee-shop-logo" />
+        <img src={centerLogo} className='h-20' alt='synapse-coffee-shop-logo' />
       </Link>
     </div>
   )

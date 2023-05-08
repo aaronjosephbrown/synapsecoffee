@@ -6,13 +6,12 @@ import MobileMenu from './MobileMenu'
 const NavBar = () => {
   return (
     <nav>
-    <MobileMenu />
+      <MobileMenu />
       <div className='hidden md:flex items-center'>
         <Left />
         <Center />
         <Right />
       </div>
-      
     </nav>
   )
 }
